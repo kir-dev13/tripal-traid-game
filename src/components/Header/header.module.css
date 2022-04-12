@@ -22,12 +22,16 @@
 }
 
 .logo {
+    display: inline;
+}
+.logo img {
     height: 70px;
     width: 125px;
+    object-fit: contain;
 }
 
 .nav {
-    display: flex;
+    display: inline-flex;
     list-style: none;
     margin: 0;
     padding: 0;
