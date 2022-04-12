@@ -1,0 +1,30 @@
+.root {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+    /* margin-bottom: 48px; */
+}
+
+.root:after {
+    content: "";
+    display: block;
+    width: 30%;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+    margin: 15px auto 0;
+}
+
+.colorBlack {
+    color: black;
+}
+
+.level1 {
+    font-size: 54px;
+}
+
+.level2 {
+    /* color: #fff; */
+    font-size: 30px;
+}
