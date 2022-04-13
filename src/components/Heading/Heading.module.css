@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     color: #fff;
+    margin-bottom: 0.5em;
+    color: #000000d9;
+    font-weight: 600;
 
     /* margin-bottom: 48px; */
 }
@@ -21,10 +24,24 @@
 }
 
 .level1 {
-    font-size: 54px;
+    font-size: 38px;
+    line-height: 1.23;
 }
 
 .level2 {
-    /* color: #fff; */
     font-size: 30px;
+    line-height: 1.35;
+}
+
+.level3 {
+    font-size: 24px;
+    line-height: 1.35;
+}
+.level4 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+.level5 {
+    font-size: 16px;
+    line-height: 1.5;
 }

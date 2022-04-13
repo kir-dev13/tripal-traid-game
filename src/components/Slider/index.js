@@ -10,7 +10,7 @@ const Slider = () => {
             <div className={s.slider}>
                 <Container className={s.sliderContent}>
                     <Heading level={1}>Это заголовок</Heading>
-                    <Heading level={2} className={s.subheader} black>
+                    <Heading level={2} className={s.subheader}>
                         Wow.Wow.Wow
                     </Heading>
                     <div className={s.image}>
