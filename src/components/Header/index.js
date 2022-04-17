@@ -1,5 +1,5 @@
 import Container from "../Container";
-import s from "./header.module.css";
+import s from "./header.module.scss";
 import logoPng from "../../assets/logo.png";
 
 const MENU = ["Menu 1", "Menu 2", "Menu 3", "Menu 4"];

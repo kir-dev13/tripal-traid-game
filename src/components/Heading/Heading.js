@@ -1,15 +1,22 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import s from "./Heading.module.css";
+import s from "./Heading.module.scss";
 
-const Heading = ({ level = 1, className, black = false, children }) => {
+const Heading = ({
+    level = 1,
+    className,
+    black = false,
+    children,
+    backLine,
+}) => {
     const el = `h${level}`;
     return React.createElement(
         el,
         {
             className: cn(s.root, className, s[`level${level}`], {
                 [s.colorBlack]: black,
+                [s.backline]: backLine,
             }),
         },
         children
@@ -26,6 +33,7 @@ Heading.propTypes = {
     className: PropTypes.string,
     black: PropTypes.bool,
     children: PropTypes.node,
+    backLine: PropTypes.bool,
 };
 
 export default Heading;

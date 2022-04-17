@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import s from "./Text.module.css";
+import s from "./Text.module.scss";
 
 const Text = ({ el, className, strong, italic, disabled, children }) => {
     return React.createElement(
