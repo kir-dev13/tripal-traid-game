@@ -2,6 +2,12 @@
     height: 80px;
 }
 
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header {
     height: 80px;
     width: 100%;
@@ -22,16 +28,18 @@
 }
 
 .logo {
-    display: inline;
-}
-.logo img {
     height: 70px;
     width: 125px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
 .nav {
-    display: inline-flex;
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;

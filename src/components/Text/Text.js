@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import s from "./Text.module.css";
 
 const Text = ({ el, className, strong, italic, disabled, children }) => {
-    console.log(el, className, strong, italic, disabled, children);
     return React.createElement(
         el,
         {
@@ -26,7 +25,7 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
-    el: PropTypes.oneOf("div", "p", "span").isRequired,
+    el: PropTypes.oneOf(["div", "p", "span"]).isRequired,
     className: PropTypes.string,
     strong: PropTypes.bool,
     italic: PropTypes.bool,
