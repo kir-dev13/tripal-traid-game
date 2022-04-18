@@ -1,6 +1,6 @@
 import Container from "../Container";
 
-import s from "./footer.module.css";
+import s from "./footer.module.scss";
 
 const Footer = () => {
     return (

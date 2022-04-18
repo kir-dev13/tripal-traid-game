@@ -6,18 +6,30 @@
     color: #000000d9;
     font-weight: 600;
 
+    &.backline {
+        text-align: center;
+        &:after {
+            content: "";
+            display: block;
+            width: 30%;
+            position: relative;
+
+            border-bottom: 1px solid #aaa;
+            margin: 15px auto 0;
+        }
+    }
+
     /* margin-bottom: 48px; */
 }
 
-.root:after {
-    content: "";
-    display: block;
-    width: 30%;
-    position: relative;
-    border-bottom: 1px solid #aaa;
-    text-align: center;
-    margin: 15px auto 0;
-}
+// .root:after {
+//     content: "";
+//     display: block;
+//     width: 30%;
+//     position: relative;
+//     text-align: center;
+//     margin: 15px auto 0;
+// }
 
 .colorBlack {
     color: black;
