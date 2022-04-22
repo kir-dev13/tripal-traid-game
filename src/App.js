@@ -81,6 +81,7 @@ const CHARACTERS = [
 
 function App() {
     const [characters, setCharacters] = useState(CHARACTERS);
+    const [bio, setBio] = useState(null);
 
     const handleLikeClick = (id) => {
         // setCharacters((prevState) => {

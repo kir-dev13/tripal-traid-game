@@ -1,5 +1,6 @@
 import Container from "../Container";
 import Heading from "../Heading/Heading";
+import Button from "../Button/Button";
 
 import s from "./slider.module.scss";
 import logoPng from "../../assets/logo.png";
@@ -18,9 +19,7 @@ const Slider = () => {
                     {/* <div className={s.image}>
                         <img src={logoPng} alt="logo" />
                     </div> */}
-                    <div className={s.call}>
-                        <button className={s.button}>Wow</button>
-                    </div>
+                    <Button>Wow Wow</Button>
                 </Container>
             </div>
         </section>
