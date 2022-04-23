@@ -15,9 +15,15 @@ const CharacterCard = ({
     description,
     isLike,
     onLike,
+    onBio,
 }) => {
-    const handleClick = () => {
+    const handleLikeClick = () => {
         onLike(id);
+    };
+
+    const handleBioClick = (e) => {
+        e.preventDefault();
+        onBio(id);
     };
 
     return (
@@ -36,7 +42,7 @@ const CharacterCard = ({
 
                 <div className={s.cardMeta}>
                     <div
-                        onClick={handleClick}
+                        onClick={handleLikeClick}
                         className={cn(s.like, {
                             [s.active]: isLike,
                         })}
@@ -44,7 +50,9 @@ const CharacterCard = ({
                         {<Like />}
                     </div>
                     <div className={s.readBio}>
-                        <a href="#">Read bio</a>
+                        <a onClick={handleBioClick} href="#">
+                            Read bio
+                        </a>
                     </div>
                 </div>
             </div>

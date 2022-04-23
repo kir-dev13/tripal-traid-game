@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 import CharacterCard from "./components/CharacterCard";
 import Footer from "./components/Footer";
-import Text from "./components/Text/Text";
+import Biography from "./pages/Biography/Biography";
 
 import "./App.scss";
 
@@ -81,26 +81,28 @@ const CHARACTERS = [
 
 function App() {
     const [characters, setCharacters] = useState(CHARACTERS);
+    const [bioId, setBioId] = useState(null);
 
     const handleLikeClick = (id) => {
-        // setCharacters((prevState) => {
-        //     return prevState.map((character) =>
-        //         character.id === id
-        //             ? { ...character, isLike: !character.isLike }
-        //             : character
-        //     );
-        // });
-
-        const likedElement = characters.find(
-            (character) => character.id === id
-        );
-        likedElement.isLike = !likedElement.isLike;
-        setCharacters([...characters]);
+        setCharacters((prevState) => {
+            return prevState.map((character) =>
+                character.id === id
+                    ? { ...character, isLike: !character.isLike }
+                    : character
+            );
+        });
     };
 
-    return (
+    const handleBioClick = (id) => {
+        setBioId(id);
+    };
+
+    const onBack = () => {
+        setBioId(null);
+    };
+
+    const mainPage = (
         <>
-            <Header />
             <Slider />
             <section className="cardSection">
                 <Container>
@@ -119,7 +121,8 @@ function App() {
                                         description={character.description}
                                         humanName={character.humanName}
                                         isLike={character.isLike}
-                                        onLike={(id) => handleLikeClick(id)}
+                                        onLike={handleLikeClick}
+                                        onBio={handleBioClick}
                                     />
                                 </div>
                             );
@@ -127,7 +130,13 @@ function App() {
                     </div>
                 </Container>
             </section>
+        </>
+    );
 
+    return (
+        <>
+            <Header />
+            {bioId ? <Biography id={bioId} onBack={onBack} /> : mainPage}
             <Footer />
         </>
     );
