@@ -10,14 +10,10 @@ import s from "./Biography.module.scss";
 const Biography = ({ id, onBack }) => {
     const character = BIO[id];
 
-    const handleBackClick = () => {
-        onBack();
-    };
-
     return (
         <Container>
             <div className={s.root}>
-                <Button onClick={handleBackClick} black>
+                <Button onClick={onBack} black>
                     Go Back!
                 </Button>
                 {character.map((bio, index) => {
