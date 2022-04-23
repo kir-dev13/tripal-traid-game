@@ -18,8 +18,12 @@
     overflow: hidden;
 }
 
+.subheader {
+    margin-bottom: 40px;
+}
+
 .sliderContent {
-    padding: 64px 0 64px 0;
+    padding: 64px 0 52px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

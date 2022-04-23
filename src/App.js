@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 import CharacterCard from "./components/CharacterCard";
 import Footer from "./components/Footer";
-import Text from "./components/Text/Text";
 import Biography from "./pages/Biography/Biography";
 
 import "./App.scss";

@@ -2,7 +2,7 @@ import Container from "../Container";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
 
-import s from "./slider.module.scss";
+import s from "./Slider.module.scss";
 import logoPng from "../../assets/logo.png";
 
 const Slider = () => {
@@ -16,10 +16,7 @@ const Slider = () => {
                     <Heading level={2} className={s.subheader}>
                         Wow.Wow.Wow
                     </Heading>
-                    {/* <div className={s.image}>
-                        <img src={logoPng} alt="logo" />
-                    </div> */}
-                    <Button>Wow Wow</Button>
+                    <Button>Wooow</Button>
                 </Container>
             </div>
         </section>
