@@ -20,11 +20,9 @@ const Header = () => {
     function handleScroll() {
         if (window.scrollY > 60) {
             setSmallHeader(true);
-            console.log(smallHeader);
         }
         if (window.scrollY < 60) {
             setSmallHeader(false);
-            console.log(smallHeader);
         }
     }
 

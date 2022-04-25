@@ -11,9 +11,9 @@ const Biography = ({ id, onBack }) => {
     const character = BIO[id];
 
     return (
-        <Container>
-            <div className={s.root}>
-                <Button onClick={onBack} black>
+        <div className={s.root}>
+            <Container>
+                <Button className={s.btn} onClick={onBack} color="black">
                     Go Back!
                 </Button>
                 {character.map((bio, index) => {
@@ -35,12 +35,14 @@ const Biography = ({ id, onBack }) => {
                         );
                     } else if (bio.type === "img") {
                         return (
-                            <img key={index} src={bio.src} alt="biography" />
+                            <div key={index} className={s.imgWrap}>
+                                <img src={bio.src} alt="biography" />
+                            </div>
                         );
                     }
                 })}
-            </div>
-        </Container>
+            </Container>
+        </div>
     );
 };
 

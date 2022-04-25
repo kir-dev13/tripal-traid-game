@@ -93,7 +93,7 @@ function App() {
         });
     };
 
-    const handleBioClick = (id) => {
+    const onReadBio = (id) => {
         setBioId(id);
     };
 
@@ -122,7 +122,7 @@ function App() {
                                         humanName={character.humanName}
                                         isLike={character.isLike}
                                         onLike={handleLikeClick}
-                                        onBio={handleBioClick}
+                                        onReadBio={onReadBio}
                                     />
                                 </div>
                             );
