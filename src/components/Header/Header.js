@@ -44,10 +44,9 @@ const Header = () => {
                     <ul className={s.nav}>
                         <li>
                             <Link to="/">Main</Link>
-                            <Link to="/Bio">Bio</Link>
-                            <Link to="#">Character</Link>
-                            <Link to="#">About Game</Link>
-                            <Link to="#">Contacts</Link>
+                            <Link to="/characters">Characters</Link>
+                            <Link to="/about">About Game</Link>
+                            <Link to="contacts">Contacts</Link>
                         </li>
                     </ul>
                 </Container>

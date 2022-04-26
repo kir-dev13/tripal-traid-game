@@ -1,15 +1,9 @@
-import { BIO } from "../../constantData/BIO";
-
+import { useParams } from "react-router-dom";
 import Container from "../../components/Container";
-import Header from "../../components/Header";
 import Heading from "../../components/Heading";
 import Text from "../../components/Text";
-import Button from "../../components/Button/Button";
-import Footer from "../../components/Footer";
-
+import { BIO } from "../../constantData/BIO";
 import s from "./Biography.module.scss";
-import Layout from "../../components/Layout/Layout";
-import { useParams } from "react-router-dom";
 
 const Biography = () => {
     const { id } = useParams();

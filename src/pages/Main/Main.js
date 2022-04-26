@@ -1,37 +1,10 @@
-import { useState } from "react";
-
-import { CHARACTERS } from "../../constantData/CHARACTERS";
-
+import CharactersList from "../../components/CharactersList/CharactersList";
 import Container from "../../components/Container";
-import Header from "../../components/Header";
 import Heading from "../../components/Heading";
 import Slider from "../../components/Slider";
-import CharacterCard from "../../components/CharacterCard";
-import Footer from "../../components/Footer";
-
 import s from "./Main.module.scss";
-import Layout from "../../components/Layout/Layout";
 
 const Main = () => {
-    const [characters, setCharacters] = useState(CHARACTERS);
-    const [bioId, setBioId] = useState(null);
-
-    const handleLikeClick = (id) => {
-        console.log(id);
-
-        setCharacters((prevState) => {
-            return prevState.map((character) =>
-                character.id === id
-                    ? { ...character, isLike: !character.isLike }
-                    : character
-            );
-        });
-    };
-
-    const onReadBio = (id) => {
-        setBioId(id);
-    };
-
     return (
         <>
             <Slider />
@@ -41,7 +14,7 @@ const Main = () => {
                         <Heading backLine>Marvel Cards</Heading>
                         <Heading level={2}>Collect your best five</Heading>
                     </div>
-                    <div className={s.cardWrap}>
+                    {/* <div className={s.cardWrap}>
                         {characters.map((character) => {
                             return (
                                 <div key={character.id}>
@@ -53,12 +26,12 @@ const Main = () => {
                                         humanName={character.humanName}
                                         isLike={character.isLike}
                                         onLike={handleLikeClick}
-                                        onReadBio={onReadBio}
                                     />
                                 </div>
                             );
                         })}
-                    </div>
+                    </div> */}
+                    <CharactersList />
                 </Container>
             </section>
         </>
