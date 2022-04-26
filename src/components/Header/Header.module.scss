@@ -52,17 +52,14 @@
 }
 
 .nav li a {
-    transition: color 0.2s linear;
-}
-
-.nav li:hover a {
-    color: red;
-}
-
-.nav li a {
     padding: 21px;
     color: initial;
     text-decoration: initial;
+    transition: color 0.2s linear;
+}
+
+.nav li a:hover {
+    color: red;
 }
 
 .header.small .logo {

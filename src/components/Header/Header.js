@@ -1,17 +1,17 @@
 import cn from "classnames";
 
-import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useLayoutEffect, useState } from "react";
 
 import Container from "../Container";
-import s from "./Header.module.scss";
 import logoPng from "../../assets/logo.png";
-
-const MENU = ["Menu 1", "Menu 2", "Menu 3", "Menu 4"];
+import s from "./Header.module.scss";
 
 const Header = () => {
     const [smallHeader, setSmallHeader] = useState(false);
+    const navigate = useNavigate();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
@@ -26,6 +26,10 @@ const Header = () => {
         }
     }
 
+    const handleLogoClick = () => {
+        navigate("/");
+    };
+
     return (
         <header className={s.root}>
             <div
@@ -34,15 +38,17 @@ const Header = () => {
                 })}
             >
                 <Container className={s.headerWrap}>
-                    <div className={s.logo}>
+                    <div onClick={handleLogoClick} className={s.logo}>
                         <img src={logoPng} alt="" />
                     </div>
                     <ul className={s.nav}>
-                        {MENU.map((item, i) => (
-                            <li key={i}>
-                                <a href="#">{item}</a>
-                            </li>
-                        ))}
+                        <li>
+                            <Link to="/">Main</Link>
+                            <Link to="/Bio">Bio</Link>
+                            <Link to="#">Character</Link>
+                            <Link to="#">About Game</Link>
+                            <Link to="#">Contacts</Link>
+                        </li>
                     </ul>
                 </Container>
             </div>
