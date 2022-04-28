@@ -1,21 +1,18 @@
-import { BIO } from "../../bio/bio";
-
+import { useParams } from "react-router-dom";
 import Container from "../../components/Container";
 import Heading from "../../components/Heading";
 import Text from "../../components/Text";
-import Button from "../../components/Button/Button";
-
+import { BIO } from "../../constantData/BIO";
 import s from "./Biography.module.scss";
 
-const Biography = ({ id, onBack }) => {
+const Biography = () => {
+    const { id } = useParams();
+
     const character = BIO[id];
 
     return (
         <div className={s.root}>
             <Container>
-                <Button className={s.btn} onClick={onBack} color="black">
-                    Go Back!
-                </Button>
                 {character.map((bio, index) => {
                     if (bio.type.match(/h\d+/)) {
                         return (

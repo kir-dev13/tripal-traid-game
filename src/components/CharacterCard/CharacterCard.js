@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
+import { Link } from "react-router-dom";
+
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 
@@ -15,13 +17,9 @@ const CharacterCard = ({
     description,
     isLike,
     onLike,
-    onReadBio,
 }) => {
     const handleLikeClick = () => {
         onLike && onLike(id);
-    };
-    const handleOnReadBioClick = () => {
-        onReadBio && onReadBio(id);
     };
 
     return (
@@ -48,9 +46,7 @@ const CharacterCard = ({
                         {<Like />}
                     </div>
                     <div className={s.readBio}>
-                        <a onClick={handleOnReadBioClick} href="#">
-                            Read bio
-                        </a>
+                        <Link to={"/bio/" + id}>Read bio</Link>
                     </div>
                 </div>
             </div>
