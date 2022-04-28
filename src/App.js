@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { useState } from "react";
 
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout";
 import Main from "./pages/Main/Main";
 import Biography from "./pages/Biography";
 import Characters from "./pages/Characters";
@@ -16,7 +16,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Main />} />
-                <Route path={"bio/:id"} element={<Biography />} />
+                <Route path="bio/:id" element={<Biography />} />
                 <Route path="characters" element={<Characters />} />
                 <Route path="about" element={<AboutGame />} />
                 <Route path="contacts" element={<Contacts />} />

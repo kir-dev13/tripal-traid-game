@@ -9,8 +9,6 @@ const CharactersList = () => {
     const [characters, setCharacters] = useState(CHARACTERS);
 
     const handleLikeClick = (id) => {
-        console.log(id);
-
         setCharacters((prevState) => {
             return prevState.map((character) =>
                 character.id === id
