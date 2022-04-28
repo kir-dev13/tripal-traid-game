@@ -24,17 +24,16 @@ const CharactersList = () => {
         <div className={s.root}>
             {characters.map((character) => {
                 return (
-                    <div key={character.id}>
-                        <CharacterCard
-                            id={character.id}
-                            name={character.name}
-                            src={character.thumbnail.path}
-                            description={character.description}
-                            humanName={character.humanName}
-                            isLike={character.isLike}
-                            onLike={handleLikeClick}
-                        />
-                    </div>
+                    <CharacterCard
+                        key={character.id}
+                        id={character.id}
+                        name={character.name}
+                        src={character.thumbnail.path}
+                        description={character.description}
+                        humanName={character.humanName}
+                        isLike={character.isLike}
+                        onLike={handleLikeClick}
+                    />
                 );
             })}
         </div>
