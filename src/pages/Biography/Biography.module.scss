@@ -6,11 +6,17 @@
     * {
         margin-bottom: 20px;
     }
-
+    .btnWrap {
+        width: 100%;
+    }
     .btn {
+        display: block;
+        flex-grow: 2;
         margin: 0 auto 20px;
     }
     .imgWrap {
+        display: block;
+        width: 100%;
         padding: 12px 0;
         text-align: center;
     }

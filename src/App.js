@@ -1,25 +1,33 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
-import { useState } from "react";
+import { useEffect } from "react";
 
 import Layout from "./components/Layout";
-import Main from "./pages/Main/Main";
+import AboutGame from "./pages/AboutGame";
 import Biography from "./pages/Biography";
 import Characters from "./pages/Characters";
-import AboutGame from "./pages/AboutGame";
 import Contacts from "./pages/Contacts";
+import Main from "./pages/Main";
+import NotFound from "./pages/NotFound";
 
 import "./App.scss";
 
 function App() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Main />} />
-                <Route path="bio/:id" element={<Biography />} />
+                <Route path="characters/:id" element={<Biography />} />
                 <Route path="characters" element={<Characters />} />
                 <Route path="about" element={<AboutGame />} />
                 <Route path="contacts" element={<Contacts />} />
+                <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
     );
