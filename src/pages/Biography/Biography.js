@@ -1,11 +1,4 @@
-import {
-    useParams,
-    useNavigate,
-    Navigate,
-    useLocation,
-} from "react-router-dom";
-
-import { useEffect } from "react";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 
 import Button from "../../components/Button/Button";
 import Heading from "../../components/Heading";
@@ -18,20 +11,6 @@ import s from "./Biography.module.scss";
 const Biography = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const location = useLocation();
-    console.log(location);
-
-    // useEffect(() => {
-    //     if (location.hash) {
-    //         const elem = document
-    //             .querySelectorAll("h2")
-    //             .filter((item) => item.innerText.includes());
-    //         elem.scrollIntoView({
-    //             block: "center",
-    //             behavior: "smooth",
-    //         });
-    //     }
-    // });
 
     const handleGoBack = () => {
         navigate(-1, {
@@ -43,12 +22,7 @@ const Biography = () => {
     const onAnchor = (e) => {
         const headingElement = e.target.closest("h2");
         const headingName = headingElement.innerText.replace(/\s/g, "_");
-
-        // console.log(e.target.closest("h2").innerText.replace(/\s/g, "_"));
-        navigate(`/characters/${id}#${headingName}`, {
-            // state: e.target.closest("h2").innerText.replace(/\s/g, "_"),
-            // state: headingName,
-        });
+        navigate(`/characters/${id}#${headingName}`);
     };
 
     if (!BIO[id]) {
@@ -66,6 +40,7 @@ const Biography = () => {
                 if (bio.type.match(/h\d+/)) {
                     return (
                         <Heading
+                            elemId={bio.text.replace(/\s/g, "_")}
                             key={index}
                             className={s.heading}
                             level={Number(bio.type.match(/\d+/)[0])}
