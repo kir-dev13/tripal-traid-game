@@ -3,9 +3,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    * {
+    *:not(.anchorLink) {
         margin-bottom: 20px;
     }
+
+    .heading {
+        margin-right: auto;
+        // margin-right: 20px;
+        &:hover .anchorLink {
+            display: inline;
+        }
+    }
+    .anchorLink {
+        display: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
     .btnWrap {
         width: 100%;
     }

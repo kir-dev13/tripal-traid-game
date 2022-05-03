@@ -1,7 +1,6 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-
 import { useEffect } from "react";
-
+import { Route, Routes, useLocation } from "react-router-dom";
+import "./App.scss";
 import Layout from "./components/Layout";
 import AboutGame from "./pages/AboutGame";
 import Biography from "./pages/Biography";
@@ -9,8 +8,6 @@ import Characters from "./pages/Characters";
 import Contacts from "./pages/Contacts";
 import Main from "./pages/Main";
 import NotFound from "./pages/NotFound";
-
-import "./App.scss";
 
 function App() {
     const location = useLocation();
