@@ -14,14 +14,10 @@ function App() {
 
     useEffect(() => {
         if (location.hash) {
-            if (location.hash) {
-                console.log("scrolling");
-
-                document.getElementById(location.hash.slice(1)).scrollIntoView({
-                    block: "center",
-                    behavior: "smooth",
-                });
-            }
+            document.getElementById(location.hash.slice(1)).scrollIntoView({
+                block: "center",
+                behavior: "smooth",
+            });
         } else {
             window.scrollTo(0, 0);
         }

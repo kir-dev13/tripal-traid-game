@@ -12,11 +12,13 @@
         margin-right: auto;
         // margin-right: 20px;
         &:hover .anchorLink {
-            display: inline;
+            // display: inline;
+            visibility: visible;
         }
     }
     .anchorLink {
-        display: none;
+        // display: none;
+        visibility: hidden;
         cursor: pointer;
         width: 30px;
         height: 30px;
