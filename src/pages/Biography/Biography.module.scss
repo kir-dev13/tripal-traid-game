@@ -1,16 +1,40 @@
 .root {
     padding: 32px 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    * {
+    *:not(.anchorLink) {
         margin-bottom: 20px;
     }
 
+    .heading {
+        margin-right: auto;
+        // margin-right: 20px;
+        &:hover .anchorLink {
+            // display: inline;
+            visibility: visible;
+        }
+    }
+    .anchorLink {
+        // display: none;
+        visibility: hidden;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    .btnWrap {
+        width: 100%;
+    }
     .btn {
+        display: block;
+        flex-grow: 2;
         margin: 0 auto 20px;
     }
     .imgWrap {
+        display: block;
+        width: 100%;
         padding: 12px 0;
         text-align: center;
     }
