@@ -7,9 +7,11 @@ import s from "./Layout.module.scss";
 
 const Layout = () => {
     const match = useMatch({ path: "/" });
+    const login = useMatch({ path: "/login" });
+
     return (
         <>
-            <Header />
+            {!login ? <Header /> : null}
             {match !== null ? (
                 <Outlet />
             ) : (
