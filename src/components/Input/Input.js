@@ -1,8 +1,17 @@
+import cn from "classnames";
 import s from "./Input.module.scss";
 
-const Input = ({ name, handleChange, value, type, id, required }) => {
+const Input = ({
+    className,
+    name,
+    handleChange,
+    value,
+    type,
+    id,
+    required,
+}) => {
     return (
-        <div className={s.root}>
+        <div className={cn(s.root, className)}>
             <input
                 name={name}
                 onChange={handleChange}

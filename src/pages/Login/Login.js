@@ -45,7 +45,7 @@ const Login = () => {
     const handleRegistration = (e) => {
         e.preventDefault();
 
-        if (registrationForm.password === registration.passwordRepeat) {
+        if (registrationForm.password === registrationForm.passwordRepeat) {
             console.log(registrationForm);
             setRegistrationForm({
                 email: "",
@@ -78,6 +78,7 @@ const Login = () => {
                     <h1 className={s.title}>Login</h1>
                     <form>
                         <Input
+                            className={s.inputContainer}
                             name="email"
                             handleChange={handleChangeLoginForm}
                             value={loginForm.email}
@@ -86,6 +87,7 @@ const Login = () => {
                             required="required"
                         />
                         <Input
+                            className={s.inputContainer}
                             name="password"
                             handleChange={handleChangeLoginForm}
                             value={loginForm.password}
@@ -115,37 +117,33 @@ const Login = () => {
                         ></div>
                     </h1>
                     <form>
-                        <div className={s.inputContainer}>
-                            <input />
-                            <label htmlFor="#signup-email">Email</label>
-                            <div className={s.bar}></div>
-                        </div>
-                        <div className={s.inputContainer}>
-                            <input
-                                name="password"
-                                onChange={handleChangeRegistrationForm}
-                                value={registrationForm.password}
-                                type="password"
-                                id="#signup-password"
-                                required="required"
-                            />
-                            <label htmlFor="#signup-password">Password</label>
-                            <div className={s.bar}></div>
-                        </div>
-                        <div className={s.inputContainer}>
-                            <input
-                                name="passwordRepeat"
-                                onChange={handleChangeRegistrationForm}
-                                value={registrationForm.passwordRepeat}
-                                type="password"
-                                id="#signup-repeat-password"
-                                required="required"
-                            />
-                            <label htmlFor="#signup-repeat-password">
-                                Repeat Password
-                            </label>
-                            <div className={s.bar}></div>
-                        </div>
+                        <Input
+                            className={s.inputContainer}
+                            name="email"
+                            handleChange={handleChangeRegistrationForm}
+                            value={registrationForm.email}
+                            type="email"
+                            id="#signup-email"
+                            required="required"
+                        />
+                        <Input
+                            className={s.inputContainer}
+                            name="password"
+                            handleChange={handleChangeRegistrationForm}
+                            value={registrationForm.password}
+                            type="password"
+                            id="#signup-password"
+                            required="required"
+                        />
+                        <Input
+                            className={s.inputContainer}
+                            name="passwordRepeat"
+                            handleChange={handleChangeRegistrationForm}
+                            value={registrationForm.passwordRepeat}
+                            type="password"
+                            id="#signup-repeat-password"
+                            required="required"
+                        />
                         <div className={s.buttonContainer}>
                             <button onClick={handleRegistration}>
                                 <span>Register</span>
