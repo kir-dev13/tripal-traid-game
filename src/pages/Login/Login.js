@@ -2,7 +2,8 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import Input from "../../components/Input/Input";
+import Input from "../../components/Input/";
+import Button from "../../components/Button/";
 
 import logoPng from "../../assets/logo.png";
 import { ReactComponent as Toggle } from "../../assets/toggle.svg";
@@ -80,7 +81,7 @@ const Login = () => {
                         <Input
                             className={s.inputContainer}
                             name="email"
-                            handleChange={handleChangeLoginForm}
+                            onChange={handleChangeLoginForm}
                             value={loginForm.email}
                             type="email"
                             id="#email"
@@ -89,16 +90,16 @@ const Login = () => {
                         <Input
                             className={s.inputContainer}
                             name="password"
-                            handleChange={handleChangeLoginForm}
+                            onChange={handleChangeLoginForm}
                             value={loginForm.password}
                             type="password"
                             id="#password"
                             required="required"
                         />
                         <div className={s.buttonContainer}>
-                            <button onClick={handleLogin}>
+                            <Button onClick={handleLogin}>
                                 <span>Go</span>
-                            </button>
+                            </Button>
                         </div>
                     </form>
                 </div>
@@ -120,7 +121,7 @@ const Login = () => {
                         <Input
                             className={s.inputContainer}
                             name="email"
-                            handleChange={handleChangeRegistrationForm}
+                            onChange={handleChangeRegistrationForm}
                             value={registrationForm.email}
                             type="email"
                             id="#signup-email"
@@ -129,7 +130,7 @@ const Login = () => {
                         <Input
                             className={s.inputContainer}
                             name="password"
-                            handleChange={handleChangeRegistrationForm}
+                            onChange={handleChangeRegistrationForm}
                             value={registrationForm.password}
                             type="password"
                             id="#signup-password"
@@ -138,16 +139,16 @@ const Login = () => {
                         <Input
                             className={s.inputContainer}
                             name="passwordRepeat"
-                            handleChange={handleChangeRegistrationForm}
+                            onChange={handleChangeRegistrationForm}
                             value={registrationForm.passwordRepeat}
                             type="password"
                             id="#signup-repeat-password"
                             required="required"
                         />
                         <div className={s.buttonContainer}>
-                            <button onClick={handleRegistration}>
+                            <Button onClick={handleRegistration}>
                                 <span>Register</span>
-                            </button>
+                            </Button>
                         </div>
                     </form>
                 </div>
