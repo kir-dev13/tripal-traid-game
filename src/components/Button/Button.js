@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import s from "./Button.module.scss";
 
 const Button = ({ className, color, children, onClick }) => {
-    const handleClick = () => {
-        onClick && onClick();
+    const handleClick = (e) => {
+        onClick && onClick(e);
     };
 
     return (

@@ -7,6 +7,7 @@ import Biography from "./pages/Biography";
 import Characters from "./pages/Characters";
 import Contacts from "./pages/Contacts";
 import Main from "./pages/Main";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -14,10 +15,20 @@ function App() {
 
     useEffect(() => {
         if (location.hash) {
-            document.getElementById(location.hash.slice(1)).scrollIntoView({
-                block: "center",
-                behavior: "smooth",
-            });
+            window.addEventListener(
+                "load",
+                () => {
+                    document
+                        .getElementById(location.hash.slice(1))
+                        .scrollIntoView({
+                            block: "center",
+                            behavior: "smooth",
+                        });
+                },
+                {
+                    once: true,
+                }
+            );
         } else {
             window.scrollTo(0, 0);
         }
@@ -31,6 +42,7 @@ function App() {
                 <Route path="characters" element={<Characters />} />
                 <Route path="about" element={<AboutGame />} />
                 <Route path="contacts" element={<Contacts />} />
+                <Route path="login" element={<Login />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
